@@ -496,5 +496,3 @@ Type `*help` to see all commands.
 - **@sm (River)** - Coordinates sprint push workflow
 
 ---
----
-*AIOS Agent - Synced from .aios-core/development/agents/devops.md*

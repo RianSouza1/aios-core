@@ -1,7 +1,7 @@
 metadata:
   version: 1.0.0
-  lastUpdated: '2026-02-16T20:22:35.905Z'
-  entityCount: 508
+  lastUpdated: '2026-02-19T17:33:55.003Z'
+  entityCount: 542
   checksumAlgorithm: sha256
 entities:
   tasks:
@@ -333,7 +333,7 @@ entities:
         constraints: []
         extensionPoints: []
       checksum: sha256:8e39b1c89f7f24f180101d82b37628019a07e84b16e5683b10ab196c35bf7028
-      lastVerified: '2026-02-08T13:33:24.177Z'
+      lastVerified: '2026-02-19T17:33:54.989Z'
     build-component:
       path: .aios-core/development/tasks/build-component.md
       type: task
@@ -686,7 +686,7 @@ entities:
         constraints: []
         extensionPoints: []
       checksum: sha256:6ce3eeeab6ed8ff6c5804b4fc4c3006c298009ab60c35b51afedac57082eeb34
-      lastVerified: '2026-02-08T13:33:24.181Z'
+      lastVerified: '2026-02-19T17:33:54.990Z'
     create-suite:
       path: .aios-core/development/tasks/create-suite.md
       type: task
@@ -1214,7 +1214,7 @@ entities:
         constraints: []
         extensionPoints: []
       checksum: sha256:6b76a6b428a1a45573431739d4740a78955a7af7a3156515d7151eb97bae2d90
-      lastVerified: '2026-02-15T22:52:07.324Z'
+      lastVerified: '2026-02-19T17:33:54.991Z'
     dev-improve-code-quality:
       path: .aios-core/development/tasks/dev-improve-code-quality.md
       type: task
@@ -1286,7 +1286,7 @@ entities:
         constraints: []
         extensionPoints: []
       checksum: sha256:fb75f56fa178b72c9716a4a00f9a0df6a6d6348f362ef3e095cff45c16bd8f43
-      lastVerified: '2026-02-08T13:33:24.194Z'
+      lastVerified: '2026-02-19T17:33:54.992Z'
     dev-validate-next-story:
       path: .aios-core/development/tasks/dev-validate-next-story.md
       type: task
@@ -3908,7 +3908,7 @@ entities:
         constraints: []
         extensionPoints: []
       checksum: sha256:f7a0bb8fed5663c88ad691b8871fdf7a861b6a7c02599f0c2db3eb9393d353c8
-      lastVerified: '2026-02-16T01:21:26.585Z'
+      lastVerified: '2026-02-19T17:33:54.996Z'
     sync-registry-intel:
       path: .aios-core/development/tasks/sync-registry-intel.md
       type: task
@@ -3927,6 +3927,354 @@ entities:
         extensionPoints: []
       checksum: sha256:0e69435307db814563823896e7ba9b29a4a9c10d90f6dedec5cb7a6d6f7ba936
       lastVerified: '2026-02-16T20:19:27.659Z'
+    refresh-angle:
+      path: .aios-core/development/tasks/copywriting/refresh-angle.md
+      type: task
+      purpose: Rewrite an ad angle based on specific fatigue feedback.
+      keywords:
+        - refresh
+        - angle
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:98c28ca806cb6247f2733ae376ffba058e2d51ad416ce3a3d5ab7aa7fb0cdcb9
+      lastVerified: '2026-02-19T17:33:54.989Z'
+    write-ad:
+      path: .aios-core/development/tasks/copywriting/write-ad.md
+      type: task
+      purpose: Write high-converting ad copy for specific platforms.
+      keywords:
+        - write
+        - ad
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:b70afa662a1df54f2a3c7bc1349639e498ac7b76e678017334a428a015b1decb
+      lastVerified: '2026-02-19T17:33:54.990Z'
+    brief-creative:
+      path: .aios-core/development/tasks/design/brief-creative.md
+      type: task
+      purpose: Generate a structured brief for a visual creative.
+      keywords:
+        - brief
+        - creative
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:aa7e7d27aa78b30c7455a69523b3fa1911dfc8402ac3b4cb42dd68aa7de9f929
+      lastVerified: '2026-02-19T17:33:54.991Z'
+    audit-emails:
+      path: .aios-core/development/tasks/email-marketing/audit-emails.md
+      type: task
+      purpose: Review and optimize existing email sequences for higher open rates and conversions.
+      keywords:
+        - audit
+        - emails
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:f431b03b3fa20c140dc42d94be795844542da5fefcd1f832024cf16e3f1ecb7a
+      lastVerified: '2026-02-19T17:33:54.992Z'
+    subject-lines:
+      path: .aios-core/development/tasks/email-marketing/subject-lines.md
+      type: task
+      purpose: Generate subject line variations for A/B testing.
+      keywords:
+        - subject
+        - lines
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:ae9d3bbe453f67907ad511c5cc57c11eebf538fc80f3c5c94eaf1497927fac8b
+      lastVerified: '2026-02-19T17:33:54.993Z'
+    write-email:
+      path: .aios-core/development/tasks/email-marketing/write-email.md
+      type: task
+      purpose: Write one email with a specific objective.
+      keywords:
+        - write
+        - email
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:acb526b6a73b1064d2b4d6d26bf9822ed42a35f7d44184e4b19ff2678ee2c8fd
+      lastVerified: '2026-02-19T17:33:54.993Z'
+    write-sequence:
+      path: .aios-core/development/tasks/email-marketing/write-sequence.md
+      type: task
+      purpose: Create a full email sequence for a specific goal.
+      keywords:
+        - write
+        - sequence
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:933041a5ce00c3e5309ec2d44827665c27d3b67e3152cef02d260e7dc17c1869
+      lastVerified: '2026-02-19T17:33:54.994Z'
+    map-funnel:
+      path: .aios-core/development/tasks/funnel-strategy/map-funnel.md
+      type: task
+      purpose: Create a step-by-step funnel architecture.
+      keywords:
+        - map
+        - funnel
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:eceea7e378a53cc8bfb9add43eaa6d75220d22ff6a0c3b13af2dcd0b617366dd
+      lastVerified: '2026-02-19T17:33:54.994Z'
+    transcribe:
+      path: .aios-core/development/tasks/localization/transcribe.md
+      type: task
+      purpose: Transcribe audio/video and adapt for cultural context.
+      keywords:
+        - transcribe
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:104aa43f59eeb47cbdad1e61cadbbf38526d487ffc0ecc052b92ff548c62b8b4
+      lastVerified: '2026-02-19T17:33:54.995Z'
+    mine-products:
+      path: .aios-core/development/tasks/mining/mine-products.md
+      type: task
+      purpose: Find potential winning products or trends.
+      keywords:
+        - mine
+        - products
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:f0c0442d5e4b996c79315d00e28c3034f7ba48a75c5825c5427ff18ed40829f5
+      lastVerified: '2026-02-19T17:33:54.995Z'
+    craft-offer:
+      path: .aios-core/development/tasks/offer-analysis/craft-offer.md
+      type: task
+      purpose: Structure a high-value offer with bonuses and guarantees.
+      keywords:
+        - craft
+        - offer
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:ca6630b0743ebf19e0de46e0ab7d1723a67ed9c14929277043d415fa0a39647e
+      lastVerified: '2026-02-19T17:33:54.996Z'
+    structure-page:
+      path: .aios-core/development/tasks/page-modeling/structure-page.md
+      type: task
+      purpose: Create a wireframe structure for a high-converting page.
+      keywords:
+        - structure
+        - page
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:4066e4e8aa33d02cde4cd12fa70938b145020abb55edbfb631bed10ea61a5791
+      lastVerified: '2026-02-19T17:33:54.996Z'
+    analyze-creative-fatigue:
+      path: .aios-core/development/tasks/traffic-management/analyze-creative-fatigue.md
+      type: task
+      purpose: Identify which creatives are dying and specifically WHY.
+      keywords:
+        - analyze
+        - creative
+        - fatigue
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:39fee41fec0319494bbd703e50379db3f22c6e90e5939127c68ffd8173d505a0
+      lastVerified: '2026-02-19T17:33:54.997Z'
+    create-campaign:
+      path: .aios-core/development/tasks/traffic-management/create-campaign.md
+      type: task
+      purpose: Guided workflow to plan and structure a new Facebook/Instagram ad campaign.
+      keywords:
+        - create
+        - campaign
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:9af921ca739301aa2968a6ac45f19213f1d5521808db5a3daf86e26341c359cc
+      lastVerified: '2026-02-19T17:33:54.997Z'
+    duplicate-entity:
+      path: .aios-core/development/tasks/traffic-management/duplicate-entity.md
+      type: task
+      purpose: Scale campaigns by duplicating high-performing Ad Sets or Ads.
+      keywords:
+        - duplicate
+        - entity
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:ceb7af69d32d4ce71e2abe877eae72c38897a73781220da5504fd6eb2f3f7a82
+      lastVerified: '2026-02-19T17:33:54.998Z'
+    generate-report:
+      path: .aios-core/development/tasks/traffic-management/generate-report.md
+      type: task
+      purpose: Generates a performance analysis report based on provided metrics.
+      keywords:
+        - generate
+        - report
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:05f5aff7937c7879536adedc567fb9c2d2ad257573a3aac3d4a02cb693173dd3
+      lastVerified: '2026-02-19T17:33:54.998Z'
+    manage-rules:
+      path: .aios-core/development/tasks/traffic-management/manage-rules.md
+      type: task
+      purpose: Create logic for automated budget optimization and safeguards.
+      keywords:
+        - manage
+        - rules
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:46f98a2674d560a7bc4e85da8797f578561b7130d4c6cc5e97dfa02259351f70
+      lastVerified: '2026-02-19T17:33:54.999Z'
+    optimize-budget:
+      path: .aios-core/development/tasks/traffic-management/optimize-budget.md
+      type: task
+      purpose: Suggests budget reallocations to maximize ROAS.
+      keywords:
+        - optimize
+        - budget
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:ca5f8f8cb02b3bc9038b0154207ee5ad5ae49548d2fff84b61a10cccefbc01f0
+      lastVerified: '2026-02-19T17:33:54.999Z'
+    rapid-fire-test:
+      path: .aios-core/development/tasks/traffic-management/rapid-fire-test.md
+      type: task
+      purpose: Launch a low-budget test to validate an Offer + Creative pair in 24h.
+      keywords:
+        - rapid
+        - fire
+        - test
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:74f2f050597bcaa77747336167fe5e8fb461e2a192d05368ea69c1748f0f2d64
+      lastVerified: '2026-02-19T17:33:55.000Z'
+    setup-bm:
+      path: .aios-core/development/tasks/traffic-management/setup-bm.md
+      type: task
+      purpose: Checklist and guide for a robust Business Manager structure.
+      keywords:
+        - setup
+        - bm
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:a4463192b609bf7baac4bbcdbd3ae86d626370cb4d0c0605cb0d4710a30d917c
+      lastVerified: '2026-02-19T17:33:55.000Z'
+    upload-creative:
+      path: .aios-core/development/tasks/traffic-management/upload-creative.md
+      type: task
+      purpose: Upload creatives via Post ID (Dark Posts) or generate variations.
+      keywords:
+        - upload
+        - creative
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:b4fb2d3464baa00a7c1788be68f5b1596daefb2e42ed9e5f2937d03e19731e05
+      lastVerified: '2026-02-19T17:33:55.001Z'
+    warmup-account:
+      path: .aios-core/development/tasks/traffic-management/warmup-account.md
+      type: task
+      purpose: Step-by-step protocol to warm up a new Ad Account and avoid bans.
+      keywords:
+        - warmup
+        - account
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:ed65b235b785c05f1253c0f8f8198565a30b78922e7986c1c4499c65e01cce1b
+      lastVerified: '2026-02-19T17:33:55.001Z'
+    workflow:
+      path: .aios-core/development/tasks/traffic-management/workflow.md
+      type: task
+      purpose: Comprehensive workflow for managing Meta Ads including Feedback Loops and MVP Testing.
+      keywords:
+        - workflow
+        - meta
+        - ads
+        - management
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.8
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:580e73fb8f9496e0789d577a127becb0e33e5860bd2c9e57d51911ee1903ce87
+      lastVerified: '2026-02-19T17:33:55.002Z'
   templates:
     activation-instructions-inline-greeting:
       path: .aios-core/product/templates/activation-instructions-inline-greeting.yaml
@@ -5997,33 +6345,6 @@ entities:
       checksum: sha256:310884d94b81be976a346987822306a16a73ba812c08c3b805f4a03216ffef38
       lastVerified: '2026-02-15T19:28:17.743Z'
   modules:
-    dev-helper:
-      path: .aios-core/core/code-intel/helpers/dev-helper.js
-      type: module
-      purpose: Code intelligence helper for @dev agent tasks - IDS G4 automation, duplicate detection, conventions, blast radius
-      keywords:
-        - code-intel
-        - dev-helper
-        - ids-g4
-        - duplicate-detection
-        - blast-radius
-        - conventions
-        - reuse
-      usedBy:
-        - dev-develop-story
-        - create-service
-        - dev-suggest-refactoring
-        - build-autonomous
-      dependencies:
-        - code-intel
-      adaptability:
-        score: 0.7
-        constraints:
-          - Requires code-intel module (NOG-1)
-        extensionPoints:
-          - Additional helper functions for other agents
-      checksum: ''
-      lastVerified: '2026-02-16T00:00:00.000Z'
     registry-syncer:
       path: .aios-core/core/code-intel/registry-syncer.js
       type: module
@@ -9049,6 +9370,206 @@ entities:
         extensionPoints: []
       checksum: sha256:5dde817f220f1f452b53026643e267eb027e4a131d1e5fc4bbcf6ebd772da3bb
       lastVerified: '2026-02-15T19:33:09.495Z'
+    copywriter:
+      path: .aios-core/development/agents/copywriter.md
+      type: agent
+      purpose: Specialist in persuasive writing for ads, VSLs, and emails. Focuses on psychology, hooks, and conversion.
+      keywords:
+        - copywriter
+        - leo
+        - (copywriter)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:6f0c6ab51cfd8c71257a497bba4647fd1fb5d12936901455456076dccbf2157b
+      lastVerified: '2026-02-19T17:33:54.981Z'
+    designer:
+      path: .aios-core/development/agents/designer.md
+      type: agent
+      purpose: >-
+        Specialist in visual communication for performance marketing. Focuses on CTR, visual hooks, and brand
+        consistency.
+      keywords:
+        - designer
+        - maya
+        - (designer)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:e1988ab99a996f166cc36d95886be12d9d9feaca4ae556d650a44cf6498b8441
+      lastVerified: '2026-02-19T17:33:54.982Z'
+    email-strategist:
+      path: .aios-core/development/agents/email-strategist.md
+      type: agent
+      purpose: >-
+        Expert in email sequences that nurture, convert, and retain. Writes emails that feel like they came from a
+        friend, not a brand. Follows the deep persuasion pattern established by the squad.
+      keywords:
+        - email
+        - strategist
+        - elara
+        - (email
+        - strategist)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:c00c19078328fb943094895981648315789fc63e8feeb3dcc4b041037e833c31
+      lastVerified: '2026-02-19T17:33:54.984Z'
+    funnel-strategist:
+      path: .aios-core/development/agents/funnel-strategist.md
+      type: agent
+      purpose: Architect of customer journeys. Focuses on maximizing LTV, increasing AOV, and plugging leaks in the funnel.
+      keywords:
+        - funnel
+        - strategist
+        - ivy
+        - (funnel
+        - strategist)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:c3fe67831c4c5230a625047494f34e727546ef4daeafa35f8497a3fa426a9312
+      lastVerified: '2026-02-19T17:33:54.984Z'
+    humanizer:
+      path: .aios-core/development/agents/humanizer.md
+      type: agent
+      purpose: >-
+        Transforms robotic or overly "marketingy" text into warm, relatable, human conversation. Adds empathy,
+        imperfection, and realness.
+      keywords:
+        - humanizer
+        - nina
+        - (humanizer)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:e6c2f4b59002cdbb859ba440d18034c770755cea5f2f3ee84c31589b565f0022
+      lastVerified: '2026-02-19T17:33:54.985Z'
+    localizer:
+      path: .aios-core/development/agents/localizer.md
+      type: agent
+      purpose: >-
+        Expert in breaking language barriers. Focuses on transcribing content and adapting it culturally for new markets
+        (Localization).
+      keywords:
+        - localizer
+        - luca
+        - (localizer)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:f77505da00ac95faef667a996f24b0a109d5dd9a0e6804d91de99fca2c743a7e
+      lastVerified: '2026-02-19T17:33:54.985Z'
+    miner:
+      path: .aios-core/development/agents/miner.md
+      type: agent
+      purpose: >-
+        Expert treasure hunter. Scours the internet for viral products, trending creatives, and untapped market
+        opportunities.
+      keywords:
+        - miner
+        - cole
+        - (miner)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:1e18139f2aa091caa31d4688a4f2a6c5a9f563f4940655ad50d467e0b8ebca87
+      lastVerified: '2026-02-19T17:33:54.986Z'
+    offer-analyst:
+      path: .aios-core/development/agents/offer-analyst.md
+      type: agent
+      purpose: Expert in crafting irresistible offers. Focuses on value stacking, pricing psychology, and market positioning.
+      keywords:
+        - offer
+        - analyst
+        - oscar
+        - (offer
+        - analyst)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:8efad50834bc1368588f38ae372a606f9522be80bad89bdfadfc3919e25cbfc3
+      lastVerified: '2026-02-19T17:33:54.986Z'
+    page-modeler:
+      path: .aios-core/development/agents/page-modeler.md
+      type: agent
+      purpose: Expert in high-converting landing pages. Uses proven frameworks and data to structure sales pages that convert.
+      keywords:
+        - page
+        - modeler
+        - sienna
+        - (page
+        - modeler)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:576e0bada1672d803f7b14931d2271096d6a4952605a55eea34d5aaf5311d2d5
+      lastVerified: '2026-02-19T17:33:54.987Z'
+    simplifier:
+      path: .aios-core/development/agents/simplifier.md
+      type: agent
+      purpose: >-
+        Breaks down any complex concept into language so simple a 10-year-old would understand. Eliminates jargon and
+        uses analogies.
+      keywords:
+        - simplifier
+        - kai
+        - (simplifier)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:6500731e1b9e5a3dd04f9e16fbde5feeea9701b6ac7445e53c46f9b2a77c2351
+      lastVerified: '2026-02-19T17:33:54.987Z'
+    traffic-manager:
+      path: .aios-core/development/agents/traffic-manager.md
+      type: agent
+      purpose: >-
+        Specialist in paid traffic acquisition, specifically for Meta Ads (Facebook & Instagram). Focuses on ROI,
+        creative testing, and audience segmentation.
+      keywords:
+        - traffic
+        - manager
+        - aiden
+        - (traffic
+        - manager)
+      usedBy: []
+      dependencies: []
+      adaptability:
+        score: 0.3
+        constraints: []
+        extensionPoints: []
+      checksum: sha256:f7c054d1916f419dbb6d0a737140cc94f386143f585bc8e2b3791403bb5405ba
+      lastVerified: '2026-02-19T17:33:54.988Z'
   checklists:
     agent-quality-gate:
       path: .aios-core/development/checklists/agent-quality-gate.md

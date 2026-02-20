@@ -1,84 +1,65 @@
-# AGENTS.md - Synkra AIOS
+# AGENTS.md - Synkra AIOS (Codex CLI)
 
-Este arquivo configura o comportamento esperado de agentes no Codex CLI neste repositorio.
+Este arquivo define as instrucoes do projeto para o Codex CLI.
 
-## Constitution
+<!-- AIOS-MANAGED-START: core -->
+## Core Rules
 
-Siga `.aios-core/constitution.md` como fonte de verdade:
-- CLI First
-- Agent Authority
-- Story-Driven Development
-- No Invention
-- Quality First
-- Absolute Imports
+1. Siga a Constitution em `.aios-core/constitution.md`
+2. Priorize `CLI First -> Observability Second -> UI Third`
+3. Trabalhe por stories em `docs/stories/`
+4. Nao invente requisitos fora dos artefatos existentes
+<!-- AIOS-MANAGED-END: core -->
 
-## Workflow Obrigatorio
-
-1. Inicie por uma story em `docs/stories/`
-2. Implemente apenas o que os acceptance criteria pedem
-3. Atualize checklist (`[ ]` -> `[x]`) e file list
-4. Execute quality gates antes de concluir
-
+<!-- AIOS-MANAGED-START: quality -->
 ## Quality Gates
 
-```bash
-npm run lint
-npm run typecheck
-npm test
-```
+- Rode `npm run lint`
+- Rode `npm run typecheck`
+- Rode `npm test`
+- Atualize checklist e file list da story antes de concluir
+<!-- AIOS-MANAGED-END: quality -->
 
-## Estrutura Principal
+<!-- AIOS-MANAGED-START: codebase -->
+## Project Map
 
 - Core framework: `.aios-core/`
-- CLI: `bin/`
-- Pacotes: `packages/`
-- Testes: `tests/`
-- Documentacao: `docs/`
+- CLI entrypoints: `bin/`
+- Shared packages: `packages/`
+- Tests: `tests/`
+- Docs: `docs/`
+<!-- AIOS-MANAGED-END: codebase -->
 
-## IDE/Agent Sync
+<!-- AIOS-MANAGED-START: commands -->
+## Common Commands
 
-- Sincronizar regras/agentes: `npm run sync:ide`
-- Validar drift: `npm run sync:ide:check`
-- Rodar paridade multi-IDE (Claude/Codex/Gemini): `npm run validate:parity`
-- Sync Claude Code: `npm run sync:ide:claude`
-- Sincronizar Gemini CLI: `npm run sync:ide:gemini`
-- Validar Codex sync/integration: `npm run validate:codex-sync && npm run validate:codex-integration`
-- Gerar skills locais do Codex: `npm run sync:skills:codex`
-- Este repositorio usa **local-first**: prefira `.codex/skills` versionado no projeto
-- Use `sync:skills:codex:global` apenas para testes fora deste repo
+- `npm run sync:ide`
+- `npm run sync:ide:check`
+- `npm run sync:skills:codex`
+- `npm run sync:skills:codex:global` (opcional; neste repo o padrao e local-first)
+- `npm run validate:structure`
+- `npm run validate:agents`
+<!-- AIOS-MANAGED-END: commands -->
 
-## Agent Shortcuts (Codex)
+<!-- AIOS-MANAGED-START: shortcuts -->
+## Agent Shortcuts
 
 Preferencia de ativacao no Codex CLI:
 1. Use `/skills` e selecione `aios-<agent-id>` vindo de `.codex/skills` (ex.: `aios-architect`)
 2. Se preferir, use os atalhos abaixo (`@architect`, `/architect`, etc.)
 
-Quando a mensagem do usuario for um atalho de agente, carregue o arquivo correspondente em `.aios-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate receber `*exit`.
+Interprete os atalhos abaixo carregando o arquivo correspondente em `.aios-core/development/agents/` (fallback: `.codex/agents/`), renderize o greeting via `generate-greeting.js` e assuma a persona ate `*exit`:
 
-Atalhos aceitos por agente:
-- `@aios-master`, `/aios-master`, `/aios-master.md` -> `.aios-core/development/agents/aios-master.md`
-- `@analyst`, `/analyst`, `/analyst.md` -> `.aios-core/development/agents/analyst.md`
 - `@architect`, `/architect`, `/architect.md` -> `.aios-core/development/agents/architect.md`
-- `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.aios-core/development/agents/data-engineer.md`
 - `@dev`, `/dev`, `/dev.md` -> `.aios-core/development/agents/dev.md`
-- `@devops`, `/devops`, `/devops.md` -> `.aios-core/development/agents/devops.md`
+- `@qa`, `/qa`, `/qa.md` -> `.aios-core/development/agents/qa.md`
 - `@pm`, `/pm`, `/pm.md` -> `.aios-core/development/agents/pm.md`
 - `@po`, `/po`, `/po.md` -> `.aios-core/development/agents/po.md`
-- `@qa`, `/qa`, `/qa.md` -> `.aios-core/development/agents/qa.md`
 - `@sm`, `/sm`, `/sm.md` -> `.aios-core/development/agents/sm.md`
-- `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.aios-core/development/agents/squad-creator.md`
+- `@analyst`, `/analyst`, `/analyst.md` -> `.aios-core/development/agents/analyst.md`
+- `@devops`, `/devops`, `/devops.md` -> `.aios-core/development/agents/devops.md`
+- `@data-engineer`, `/data-engineer`, `/data-engineer.md` -> `.aios-core/development/agents/data-engineer.md`
 - `@ux-design-expert`, `/ux-design-expert`, `/ux-design-expert.md` -> `.aios-core/development/agents/ux-design-expert.md`
-- `@content-organizer`, `/content-organizer`, `/content-organizer.md` -> `.aios-core/development/agents/content-organizer.md`
-- `@deep-researcher`, `/deep-researcher`, `/deep-researcher.md` -> `.aios-core/development/agents/deep-researcher.md`
-- `@deliverables-expert`, `/deliverables-expert`, `/deliverables-expert.md` -> `.aios-core/development/agents/deliverables-expert.md`
-- `@ebook-writer`, `/ebook-writer`, `/ebook-writer.md` -> `.aios-core/development/agents/ebook-writer.md`
-- `@landing-page-dev`, `/landing-page-dev`, `/landing-page-dev.md` -> `.aios-core/development/agents/landing-page-dev.md`
-- `@layout-designer`, `/layout-designer`, `/layout-designer.md` -> `.aios-core/development/agents/layout-designer.md`
-- `@mvp-exporter`, `/mvp-exporter`, `/mvp-exporter.md` -> `.aios-core/development/agents/mvp-exporter.md`
-- `@proofreader`, `/proofreader`, `/proofreader.md` -> `.aios-core/development/agents/proofreader.md`
-- `@visual-creator`, `/visual-creator`, `/visual-creator.md` -> `.aios-core/development/agents/visual-creator.md`
-
-Resposta esperada ao ativar atalho:
-1. Confirmar agente ativado
-2. Mostrar 3-6 comandos principais (`*help`, etc.)
-3. Seguir na persona do agente
+- `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.aios-core/development/agents/squad-creator.md`
+- `@aios-master`, `/aios-master`, `/aios-master.md` -> `.aios-core/development/agents/aios-master.md`
+<!-- AIOS-MANAGED-END: shortcuts -->

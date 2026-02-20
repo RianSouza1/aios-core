@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tai Chi for Beginners — Your First Steps to Inner Balance</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600&display=swap');
+
+        @page {
+            size: A4;
+            margin: 2.5cm 2cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 12pt;
+            line-height: 1.8;
+            color: #1a1a2e;
+            background: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        .cover {
+            text-align: center;
+            page-break-after: always;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .cover-image {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .cover h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .cover .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: .85;
+            margin-bottom: 2rem;
+        }
+
+        .cover .author {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .9rem;
+            opacity: .7;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .cover .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #0284c7;
+            margin: 3rem 0 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid #0284c7;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0369a1;
+            margin: 2rem 0 .8rem;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 1.5rem 0 .5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        ul,
+        ol {
+            margin: .5rem 0 1.5rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: .4rem;
+        }
+
+        .callout {
+            background: #e0f2fe;
+            border-left: 4px solid #38bdf8;
+            padding: 1rem 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: .95rem;
+        }
+
+        .callout strong {
+            color: #0369a1;
+        }
+
+        .exercise {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            page-break-inside: avoid;
+        }
+
+        .exercise h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .95rem;
+            font-weight: 600;
+            color: #0369a1;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: .6rem;
+        }
+
+        .exercise ol {
+            margin-left: 1.2rem;
+        }
+
+        .exercise li {
+            font-size: .95rem;
+            margin-bottom: .3rem;
+        }
+
+        .toc {
+            page-break-after: always;
+            padding: 2rem 0;
+        }
+
+        .toc h2 {
+            text-align: center;
+            border: none;
+            margin-bottom: 2rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            padding: .6rem 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .toc .chapter-num {
+            display: inline-block;
+            width: 2.5rem;
+            font-weight: 600;
+            color: #0284c7;
+        }
+
+        .page-break {
+            page-break-before: always;
+        }
+
+        .disclaimer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ccc;
+            font-size: .85rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: none;
+            }
+
+            .cover {
+                border-radius: 0;
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- COVER -->
+    <div class="cover">
+        <img src="../images/cover-beginners.png" alt="Tai Chi for Beginners eBook Cover" class="cover-image">
+    </div>
+
+    <!-- TABLE OF CONTENTS -->
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><span class="chapter-num">1</span> What Is Tai Chi?</li>
+            <li><span class="chapter-num">2</span> A Brief History & Philosophy</li>
+            <li><span class="chapter-num">3</span> The Core Principles of Tai Chi</li>
+            <li><span class="chapter-num">4</span> Basic Stances & Postures</li>
+            <li><span class="chapter-num">5</span> Your First Movements</li>
+            <li><span class="chapter-num">6</span> 7-Day Starter Routine</li>
+            <li><span class="chapter-num">7</span> Common Mistakes & How to Avoid Them</li>
+        </ul>
+    </div>
+
+    <!-- CHAPTER 1 -->
+    <h1>Chapter 1: What Is Tai Chi?</h1>
+
+    <p>Tai Chi (often written as "Tai Chi Chuan" or "Taijiquan") is an ancient Chinese practice that combines slow,
+        deliberate movements with deep breathing and mental focus. While it originated as a martial art, today it is
+        practiced worldwide primarily for its health benefits, stress reduction, and meditative qualities.</p>
+
+    <p>If you've ever seen a group of people moving slowly and gracefully in a park — arms flowing, weight shifting,
+        each movement blending smoothly into the next — you've witnessed Tai Chi in action. It looks simple, even
+        effortless. But within that simplicity lies a profound system for improving your physical and mental well-being.
+    </p>
+
+    <h2>Tai Chi Is for Everyone</h2>
+
+    <p>One of the most beautiful things about Tai Chi is that it meets you wherever you are. Whether you're 25 or 85,
+        athletic or sedentary, flexible or stiff — Tai Chi can be adapted to your body and ability level. There is no
+        such thing as being "too old," "too inflexible," or "too unfit" for Tai Chi.</p>
+
+    <p>Unlike many forms of exercise, Tai Chi has:</p>
+    <ul>
+        <li><strong>No impact:</strong> Your feet stay close to the ground, eliminating stress on joints</li>
+        <li><strong>No equipment:</strong> You can practice anywhere with a small open space</li>
+        <li><strong>No competition:</strong> The only person you're working with is yourself</li>
+        <li><strong>No forcing:</strong> Every movement should feel comfortable and controlled</li>
+    </ul>
+
+    <div class="callout">
+        <strong>Remember:</strong> Tai Chi is not about perfection. It's about presence. If you can breathe and move,
+        you can practice Tai Chi.
+    </div>
+
+    <!-- CHAPTER 2 -->
+    <div class="page-break"></div>
+    <h1>Chapter 2: A Brief History & Philosophy</h1>
+
+    <p>Understanding the roots of Tai Chi will deepen your practice and give you a richer appreciation for what you're
+        learning. You don't need to memorize these details — just let them provide context and inspiration.</p>
+
+    <h2>Origins</h2>
+    <p>Tai Chi originated in China during the 12th-17th centuries. While its exact origins are debated by historians,
+        the most widely accepted story attributes its creation to a Taoist monk named Zhang Sanfeng. According to
+        legend, Zhang observed a fight between a crane and a snake, noticing how the snake's yielding, circular
+        movements deflected the crane's direct attacks. Inspired by this, he developed a martial art based on softness
+        overcoming hardness.</p>
+
+    <h2>The Five Major Styles</h2>
+    <p>Over the centuries, Tai Chi evolved into five main family styles:</p>
+    <ul>
+        <li><strong>Yang Style:</strong> The most popular and widely practiced. Known for its large, graceful, expansive
+            movements. This is the style used in this book.</li>
+        <li><strong>Chen Style:</strong> The oldest style, featuring a mix of slow movements and explosive bursts. More
+            physically demanding.</li>
+        <li><strong>Wu Style:</strong> Characterized by smaller, more compact movements. Excellent for developing
+            internal strength.</li>
+        <li><strong>Sun Style:</strong> Known as the most gentle style, featuring high stances and agile footwork.
+            Popular among seniors.</li>
+        <li><strong>Wu/Hao Style:</strong> A rare style focusing on internal energy development with very small, subtle
+            movements.</li>
+    </ul>
+
+    <h2>The Philosophy of Yin & Yang</h2>
+    <p>At the heart of Tai Chi is the ancient Chinese concept of Yin and Yang — the idea that all things exist as
+        complementary opposites. In Tai Chi, every movement embodies this duality:</p>
+    <ul>
+        <li>When one hand rises (Yang), the other lowers (Yin)</li>
+        <li>As you shift forward, you prepare to shift back</li>
+        <li>As you inhale (expanding), you prepare to exhale (contracting)</li>
+    </ul>
+    <p>This constant flow between opposites creates the harmony and balance that makes Tai Chi so distinctive and
+        effective.</p>
+
+    <!-- CHAPTER 3 -->
+    <div class="page-break"></div>
+    <h1>Chapter 3: The Core Principles of Tai Chi</h1>
+
+    <p>Before learning specific movements, it helps to understand the core principles that guide all Tai Chi practice.
+        These principles apply to every movement you'll learn.</p>
+
+    <h2>1. Relax (Song)</h2>
+    <p>The most important principle in Tai Chi is relaxation — but not limpness. "Song" means releasing unnecessary
+        tension while maintaining structure. Your muscles should be engaged enough to support your body, but never
+        tense, stiff, or clenched. Think of a cat at rest: relaxed yet ready to move instantly.</p>
+
+    <h2>2. Slowness (Man)</h2>
+    <p>Every movement in Tai Chi is performed slowly and deliberately. Slowness allows you to feel what your body is
+        doing, maintain control, and develop the mind-body connection that makes Tai Chi so powerful. A good guideline:
+        if you can go slower, you should.</p>
+
+    <h2>3. Continuity (Lian Xu)</h2>
+    <p>Tai Chi movements flow continuously from one to the next, like water in a stream. There are no abrupt starts or
+        stops. Even when you pause, the energy continues. This continuous quality is what gives Tai Chi its
+        characteristic grace.</p>
+
+    <h2>4. Rootedness (Gen)</h2>
+    <p>Your connection to the ground is fundamental. Imagine your feet growing roots into the earth, providing a stable
+        base from which all movement originates. The lower your stance (within comfort), the more rooted and stable
+        you'll feel.</p>
+
+    <h2>5. Intention (Yi)</h2>
+    <p>In Tai Chi, the mind leads the body. Before your hand moves, your mind has already traveled to its destination.
+        This principle — "Yi leads Qi (energy), Qi leads Li (force)" — means that mental focus should always precede
+        physical action.</p>
+
+    <div class="callout">
+        <strong>Practical Tip:</strong> You don't need to master all five principles at once. Focus on relaxation first.
+        As that becomes natural, gradually incorporate the others. Mastery comes from years of practice — enjoy the
+        journey.
+    </div>
+
+    <!-- CHAPTER 4 -->
+    <div class="page-break"></div>
+    <h1>Chapter 4: Basic Stances & Postures</h1>
+
+    <p>Every Tai Chi movement begins and ends with a stance. Learning these fundamental postures will give you the
+        physical vocabulary you need for all future movements.</p>
+
+    <div class="exercise">
+        <h4>Stance 1: Wuji (Starting Position)</h4>
+        <ol>
+            <li>Stand with feet parallel, shoulder-width apart.</li>
+            <li>Knees slightly bent (about 2 inches).</li>
+            <li>Tailbone tucked slightly under. Imagine your spine as a straight column.</li>
+            <li>Shoulders relaxed and dropped. Arms hang naturally at your sides, fingers relaxed.</li>
+            <li>Chin slightly tucked in. Imagine the top of your head being pulled gently upward by a string.</li>
+            <li>Eyes look forward softly — not focused on anything specific.</li>
+            <li>Breathe naturally. Stand for 1-3 minutes.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Stance 2: Bow Stance (Gong Bu)</h4>
+        <ol>
+            <li>From Wuji, step forward with your left foot about one shoulder-width ahead.</li>
+            <li>Bend your front (left) knee so it tracks over your toes. Keep your back leg straight but not locked.
+            </li>
+            <li>About 70% of your weight is on the front leg, 30% on the back leg.</li>
+            <li>Both feet point forward (back foot can angle out up to 45 degrees).</li>
+            <li>Hips face forward. Upper body stays upright and centered.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Stance 3: Empty Stance (Xu Bu)</h4>
+        <ol>
+            <li>From Wuji, shift your weight entirely onto your right leg.</li>
+            <li>Touch your left toes lightly on the ground in front of you — carrying no weight.</li>
+            <li>Your right leg bears 100% of your weight, knee bent.</li>
+            <li>This stance develops balance and control. Hold for 5-10 seconds per side.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Stance 4: Horse Stance (Ma Bu)</h4>
+        <ol>
+            <li>Stand with feet wider than shoulder-width, toes pointing slightly outward.</li>
+            <li>Bend both knees equally, as if sitting on a horse (or a high stool).</li>
+            <li>Weight is distributed evenly 50/50 between both legs.</li>
+            <li>Back is straight, tailbone tucked under. Hands can rest on thighs or hold in front of the body.</li>
+            <li>Start by holding for 30 seconds. Gradually increase to 2-3 minutes.</li>
+        </ol>
+    </div>
+
+    <p>Practice transitioning between these stances slowly and smoothly. This alone is an excellent daily exercise that
+        builds leg strength, balance, and body awareness.</p>
+
+    <!-- CHAPTER 5 -->
+    <div class="page-break"></div>
+    <h1>Chapter 5: Your First Movements</h1>
+
+    <p>Now that you know the stances, it's time to add movement. These are the simplest, most foundational Tai Chi
+        movements. Master these, and you'll have the building blocks for any Tai Chi form.</p>
+
+    <div class="exercise">
+        <h4>Movement 1: Opening Form (Qi Shi)</h4>
+        <ol>
+            <li>Begin in Wuji stance.</li>
+            <li>Inhale: slowly raise both arms in front of you to shoulder height, palms facing down. Move as if you're
+                lifting your arms through water.</li>
+            <li>Exhale: gently bend your knees a bit deeper while lowering your arms back to your sides.</li>
+            <li>Repeat 8-10 times.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 2: Ward Off (Peng)</h4>
+        <ol>
+            <li>From Wuji, shift your weight to your right leg.</li>
+            <li>Step forward with your left foot into a Bow Stance.</li>
+            <li>As you step, raise your left arm in front of your chest, palm facing inward, as if holding a large ball
+                against your chest.</li>
+            <li>Your right hand lowers to your right hip, palm facing down.</li>
+            <li>Hold for a moment, then step back and repeat on the other side.</li>
+            <li>This is the most fundamental defensive posture in Tai Chi.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 3: Roll Back (Lu)</h4>
+        <ol>
+            <li>From the Ward Off position, turn your waist slightly to the right.</li>
+            <li>As you turn, your left hand rotates palm-up and draws back toward your right shoulder, as if redirecting
+                an incoming force.</li>
+            <li>Simultaneously shift your weight from front to back leg.</li>
+            <li>This movement teaches you the Tai Chi principle of "yielding" — using softness to redirect force.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 4: Press (Ji)</h4>
+        <ol>
+            <li>From Roll Back, shift your weight forward again into the Bow Stance.</li>
+            <li>Bring both hands together in front of your chest: left palm pressing against the back of your right
+                wrist.</li>
+            <li>As you shift forward, gently press both hands away from your body at chest height.</li>
+            <li>This movement combines two hands into one coordinated action.</li>
+        </ol>
+    </div>
+
+    <div class="callout">
+        <strong>Note:</strong> These four movements — Opening Form, Ward Off, Roll Back, and Press — are known as the
+        "Four Cardinal Techniques" of Tai Chi. They appear in virtually every Tai Chi form. Master these, and you'll
+        feel at home in any Tai Chi class.
+    </div>
+
+    <!-- CHAPTER 6 -->
+    <div class="page-break"></div>
+    <h1>Chapter 6: 7-Day Starter Routine</h1>
+
+    <p>This routine is designed to ease you into a daily Tai Chi practice over one week. Each day builds on the previous
+        one. By Day 7, you'll have a complete 12-minute routine you can repeat indefinitely.</p>
+
+    <h2>Day 1: Breathe & Stand (5 minutes)</h2>
+    <ul>
+        <li>Practice Wuji stance for 3 minutes with abdominal breathing.</li>
+        <li>Practice Horse Stance for 2 minutes (rest as needed).</li>
+    </ul>
+
+    <h2>Day 2: Add the Opening Form (7 minutes)</h2>
+    <ul>
+        <li>Wuji + breathing (2 min).</li>
+        <li>Opening Form — 10 repetitions (3 min).</li>
+        <li>Horse Stance hold (2 min).</li>
+    </ul>
+
+    <h2>Day 3: Weight Shifts (8 minutes)</h2>
+    <ul>
+        <li>Wuji + breathing (2 min).</li>
+        <li>Opening Form — 10 reps (2 min).</li>
+        <li>Side-to-side weight shifts — 10 each direction (2 min).</li>
+        <li>Forward-back weight shift — 10 reps (2 min).</li>
+    </ul>
+
+    <h2>Day 4: First Real Movement (10 minutes)</h2>
+    <ul>
+        <li>Opening Form warm-up (2 min).</li>
+        <li>Ward Off — 8 reps each side (4 min).</li>
+        <li>Weight shifts and stance transitions (2 min).</li>
+        <li>Standing meditation to close (2 min).</li>
+    </ul>
+
+    <h2>Day 5: Building the Sequence (10 minutes)</h2>
+    <ul>
+        <li>Opening Form (2 min).</li>
+        <li>Ward Off → Roll Back — practice the transition (4 min).</li>
+        <li>Empty Stance holds — 8 seconds each side (2 min).</li>
+        <li>Standing meditation (2 min).</li>
+    </ul>
+
+    <h2>Day 6: Four Techniques (12 minutes)</h2>
+    <ul>
+        <li>Opening Form (2 min).</li>
+        <li>Ward Off → Roll Back → Press — flowing sequence (6 min).</li>
+        <li>Stance transition practice: Wuji → Bow → Empty → Horse (2 min).</li>
+        <li>Standing meditation (2 min).</li>
+    </ul>
+
+    <h2>Day 7: Your Complete Beginner Routine (12 minutes)</h2>
+    <ul>
+        <li>Opening Form — 8 reps (2 min).</li>
+        <li>Ward Off → Roll Back → Press — both sides (4 min).</li>
+        <li>Weight shifts with arm coordination (2 min).</li>
+        <li>Stance flow: Wuji → Bow → Empty → Horse → Wuji (2 min).</li>
+        <li>Closing: hands to lower belly, 3 deep breaths (2 min).</li>
+    </ul>
+
+    <div class="callout">
+        <strong>After Day 7:</strong> Continue practicing this routine daily. Once it feels comfortable (usually after
+        2-3 weeks), you're ready for the full 28-Day program in "Tai Chi for Seniors" — the main book in this bundle.
+    </div>
+
+    <!-- CHAPTER 7 -->
+    <div class="page-break"></div>
+    <h1>Chapter 7: Common Mistakes & How to Avoid Them</h1>
+
+    <p>Every beginner makes mistakes — it's a natural part of learning. Here are the most common ones and how to correct
+        them.</p>
+
+    <h2>Mistake 1: Moving Too Fast</h2>
+    <p><strong>The Problem:</strong> Many beginners rush through movements, trying to "get them right" quickly. This
+        defeats the purpose of Tai Chi.</p>
+    <p><strong>The Fix:</strong> Set a mental speed limit. Imagine you're moving through thick honey. If a movement
+        takes you 3 seconds, try to stretch it to 6. True Tai Chi is almost always slower than you think.</p>
+
+    <h2>Mistake 2: Holding Your Breath</h2>
+    <p><strong>The Problem:</strong> When concentrating on new movements, many beginners unknowingly hold their breath
+        or breathe shallowly.</p>
+    <p><strong>The Fix:</strong> If you can't coordinate your breath with movements yet, that's fine — just breathe
+        naturally. Never hold your breath. The coordination will develop over time.</p>
+
+    <h2>Mistake 3: Locking Your Knees</h2>
+    <p><strong>The Problem:</strong> Straightening the legs completely puts stress on the knee joints and removes the
+        "rooted" quality from your stance.</p>
+    <p><strong>The Fix:</strong> Keep a slight bend in your knees at all times — even when standing "straight." Think of
+        your knees as shock absorbers.</p>
+
+    <h2>Mistake 4: Leaning Forward</h2>
+    <p><strong>The Problem:</strong> Beginners often lean their upper body forward when stepping or reaching, which
+        compromises balance.</p>
+    <p><strong>The Fix:</strong> Keep your spine vertical. Imagine a plumb line from the top of your head straight down
+        to the ground between your feet. All movement happens below the waist; your upper body stays upright.</p>
+
+    <h2>Mistake 5: Tensing the Shoulders</h2>
+    <p><strong>The Problem:</strong> Stress lives in the shoulders. Many beginners unconsciously raise their shoulders
+        toward their ears during practice.</p>
+    <p><strong>The Fix:</strong> At least once every minute, do a quick check: are your shoulders down and relaxed? If
+        not, exhale and let them drop. Over time, relaxed shoulders will become your default.</p>
+
+    <h2>Mistake 6: Seeking Perfection Too Early</h2>
+    <p><strong>The Problem:</strong> Comparing yourself to experienced practitioners or worrying about getting every
+        detail right can create frustration and discourage practice.</p>
+    <p><strong>The Fix:</strong> Embrace the beginner's mindset. In Tai Chi, there is a saying: "A journey of a thousand
+        miles begins with a single step." Every master was once a beginner who simply kept showing up. Focus on
+        consistency, not perfection.</p>
+
+    <div class="callout">
+        <strong>Final Thought:</strong> The fact that you've started this journey is the most important step. Keep
+        coming back to these pages, keep practicing, and let Tai Chi transform your body and mind — one gentle movement
+        at a time.
+    </div>
+
+    <p class="disclaimer">
+        © 2026 RSCA Library. All rights reserved.<br>
+        This publication is for informational purposes only. Consult a healthcare professional before starting any new
+        exercise program.
+    </p>
+
+</body>
+
+</html>

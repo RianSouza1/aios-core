@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tai Chi for Seniors — Complete 28-Day Balance & Mobility Program</title>
+    <style>
+        /* Print-optimized eBook Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;600&display=swap');
+
+        @page {
+            size: A4;
+            margin: 2.5cm 2cm;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 12pt;
+            line-height: 1.8;
+            color: #1a1a2e;
+            background: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* Cover Page */
+        .cover {
+            text-align: center;
+            page-break-after: always;
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .cover-image {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.25);
+            display: block;
+            margin: 0 auto;
+        }
+
+        .cover h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .cover .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: .85;
+            margin-bottom: 2rem;
+        }
+
+        .cover .author {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .9rem;
+            opacity: .7;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        .cover .icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Chapter Headings */
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #059669;
+            margin: 3rem 0 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid #059669;
+            page-break-after: avoid;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0d9488;
+            margin: 2rem 0 .8rem;
+            page-break-after: avoid;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin: 1.5rem 0 .5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Lists */
+        ul,
+        ol {
+            margin: .5rem 0 1.5rem 1.5rem;
+        }
+
+        li {
+            margin-bottom: .4rem;
+        }
+
+        /* Callout Boxes */
+        .callout {
+            background: #f0fdfa;
+            border-left: 4px solid #0d9488;
+            padding: 1rem 1.2rem;
+            margin: 1.5rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: .95rem;
+        }
+
+        .callout strong {
+            color: #059669;
+        }
+
+        .warning {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+        }
+
+        .warning strong {
+            color: #b45309;
+        }
+
+        /* Exercise Box */
+        .exercise {
+            background: #ecfdf5;
+            border: 1px solid #a7f3d0;
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.5rem 0;
+            page-break-inside: avoid;
+        }
+
+        .exercise h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-size: .95rem;
+            font-weight: 600;
+            color: #059669;
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: .6rem;
+        }
+
+        .exercise ol {
+            margin-left: 1.2rem;
+        }
+
+        .exercise li {
+            font-size: .95rem;
+            margin-bottom: .3rem;
+        }
+
+        /* Table of Contents */
+        .toc {
+            page-break-after: always;
+            padding: 2rem 0;
+        }
+
+        .toc h2 {
+            text-align: center;
+            border: none;
+            margin-bottom: 2rem;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .toc li {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 1rem;
+            padding: .6rem 0;
+            border-bottom: 1px dotted #ccc;
+        }
+
+        .toc .chapter-num {
+            display: inline-block;
+            width: 2.5rem;
+            font-weight: 600;
+            color: #059669;
+        }
+
+        /* Page break utility */
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* Footer-like disclaimer */
+        .disclaimer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #ccc;
+            font-size: .85rem;
+            color: #64748b;
+            text-align: center;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                max-width: none;
+            }
+
+            .cover {
+                border-radius: 0;
+                min-height: 100vh;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======== COVER ======== -->
+    <div class="cover">
+        <img src="../images/cover-seniors.png" alt="Tai Chi for Seniors eBook Cover" class="cover-image">
+    </div>
+
+    <!-- ======== TABLE OF CONTENTS ======== -->
+    <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><span class="chapter-num">1</span> Introduction — Why Tai Chi for Seniors?</li>
+            <li><span class="chapter-num">2</span> The Science Behind Tai Chi & Aging</li>
+            <li><span class="chapter-num">3</span> Getting Started — Safety Guidelines</li>
+            <li><span class="chapter-num">4</span> Essential Breathing Techniques</li>
+            <li><span class="chapter-num">5</span> The 10-Minute Daily Routine</li>
+            <li><span class="chapter-num">6</span> Week 1 — Building Your Foundation</li>
+            <li><span class="chapter-num">7</span> Week 2 — Improving Balance & Stability</li>
+            <li><span class="chapter-num">8</span> Week 3 — Deepening Your Practice</li>
+            <li><span class="chapter-num">9</span> Week 4 — Flow & Confidence</li>
+            <li><span class="chapter-num">10</span> Relaxation & Stress Relief Techniques</li>
+            <li><span class="chapter-num">11</span> Maintaining Your Practice Long-Term</li>
+        </ul>
+    </div>
+
+    <!-- ======== CHAPTER 1 ======== -->
+    <h1>Chapter 1: Introduction — Why Tai Chi for Seniors?</h1>
+
+    <p>As we age, one of the most common fears is the gradual loss of mobility, independence, and physical confidence.
+        Falls become a major concern, joints begin to ache, and the simple daily activities that once felt effortless
+        start to require more effort. Many seniors find themselves caught in a frustrating cycle: the less they move,
+        the weaker they get, and the weaker they get, the less they want to move.</p>
+
+    <p>Tai Chi offers a way out of this cycle. Developed centuries ago in China, this ancient martial art has evolved
+        into one of the most researched and recommended forms of exercise for older adults. Unlike high-impact workouts,
+        running, or even brisk walking, Tai Chi is gentle on the joints, easy to adapt to any fitness level, and
+        requires no special equipment whatsoever.</p>
+
+    <p>This book is your complete guide to getting started with Tai Chi as a senior. Whether you're 55 or 95, whether
+        you exercise regularly or haven't moved intentionally in years, the program in these pages was designed
+        specifically for you.</p>
+
+    <div class="callout">
+        <strong>What makes this book different:</strong> Unlike generic Tai Chi guides, every movement, routine, and
+        exercise in this program was selected and sequenced specifically for seniors. We prioritize safety, clarity, and
+        gradual progression — so you can improve at your own pace without risk.
+    </div>
+
+    <h2>What You'll Gain from This Program</h2>
+    <ul>
+        <li><strong>Better Balance:</strong> Reduce your risk of falls with exercises that strengthen your stabilizing
+            muscles and improve proprioception.</li>
+        <li><strong>Increased Flexibility:</strong> Gently extend your range of motion without forcing your body into
+            painful stretches.</li>
+        <li><strong>Stronger Core:</strong> Build the deep abdominal and back muscles that support good posture and ease
+            of movement.</li>
+        <li><strong>Reduced Pain:</strong> Many practitioners report significant relief from chronic joint pain,
+            arthritis, and stiffness.</li>
+        <li><strong>Mental Clarity:</strong> Tai Chi's meditative quality helps reduce stress, improve focus, and
+            promote emotional well-being.</li>
+        <li><strong>Greater Independence:</strong> Feel confident getting up from a chair, climbing stairs, and moving
+            through your daily life.</li>
+    </ul>
+
+    <!-- ======== CHAPTER 2 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 2: The Science Behind Tai Chi & Aging</h1>
+
+    <p>You might wonder: can something as gentle and slow as Tai Chi really make a measurable difference? The answer
+        from modern science is a resounding yes.</p>
+
+    <h2>Research-Backed Benefits</h2>
+
+    <p>Over the past two decades, hundreds of clinical studies have examined the effects of Tai Chi on older adults. The
+        results are consistently positive:</p>
+
+    <ul>
+        <li><strong>Falls Prevention:</strong> A 2019 study published in JAMA Internal Medicine found that Tai Chi
+            reduced the rate of falls among older adults by 58% compared to conventional stretching exercises. This was
+            one of the largest studies of its kind, involving over 670 participants.</li>
+        <li><strong>Balance Improvement:</strong> Research from the Oregon Research Institute demonstrated that adults
+            over 65 who practiced Tai Chi for just 12 weeks showed significant improvements in dynamic balance and
+            postural stability.</li>
+        <li><strong>Pain Reduction:</strong> The Arthritis Foundation recommends Tai Chi as a safe, effective way to
+            manage arthritis pain. Studies show it reduces inflammation markers and improves joint function.</li>
+        <li><strong>Cognitive Function:</strong> A systematic review in the Journal of Alzheimer's Disease found that
+            regular Tai Chi practice was associated with improved cognitive function and reduced risk of cognitive
+            decline in adults over 60.</li>
+        <li><strong>Heart Health:</strong> The American Heart Association has recognized Tai Chi as a moderate-intensity
+            exercise that can help lower blood pressure and improve cardiovascular health in older adults.</li>
+    </ul>
+
+    <div class="callout">
+        <strong>Key Finding:</strong> The National Institute on Aging now recommends Tai Chi as one of the most
+        effective exercises for improving balance and reducing fall risk in older adults. It is also one of the only
+        exercises shown to simultaneously improve physical and cognitive function.
+    </div>
+
+    <h2>Why Tai Chi Works So Well for Seniors</h2>
+
+    <p>What makes Tai Chi particularly effective for older adults is the unique way it challenges the body. Unlike
+        conventional exercise that focuses on isolated muscle groups, Tai Chi engages the entire body in coordinated,
+        flowing movements. This trains the neuromuscular connections that are essential for balance and coordination —
+        the very systems that tend to decline with age.</p>
+
+    <p>Additionally, Tai Chi's emphasis on deep breathing and mental focus activates the parasympathetic nervous system,
+        which helps reduce stress hormones, lower blood pressure, and improve sleep quality. This mind-body integration
+        is what sets Tai Chi apart from other forms of exercise.</p>
+
+    <!-- ======== CHAPTER 3 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 3: Getting Started — Safety Guidelines</h1>
+
+    <p>Before you begin any exercise program, it's important to set yourself up for success and safety. This chapter
+        covers everything you need to know before your first session.</p>
+
+    <h2>Consult Your Doctor</h2>
+
+    <p>If you have any chronic health conditions, recent injuries, or mobility limitations, please speak with your
+        healthcare provider before starting this program. While Tai Chi is one of the safest forms of exercise, it's
+        always wise to get clearance from your doctor — especially if you have significant balance issues, uncontrolled
+        blood pressure, or recent surgical procedures.</p>
+
+    <div class="warning callout">
+        <strong>⚠️ Safety First:</strong> If you feel dizzy, experience sharp pain, or become short of breath during any
+        exercise, stop immediately and rest. Tai Chi should always feel comfortable and controlled.
+    </div>
+
+    <h2>Setting Up Your Practice Space</h2>
+    <ul>
+        <li><strong>Clear Area:</strong> You need about 6 feet x 6 feet (2m x 2m) of open space. Remove any tripping
+            hazards such as rugs, loose cords, or small furniture.</li>
+        <li><strong>Flat Surface:</strong> Practice on a flat, non-slippery surface. Avoid thick carpet or uneven ground
+            when starting out.</li>
+        <li><strong>Support Nearby:</strong> Keep a sturdy chair or wall within arm's reach for the first few weeks.
+            This gives you something to hold onto if you feel unsteady.</li>
+        <li><strong>Good Lighting:</strong> Ensure your space is well-lit so you can see clearly and move confidently.
+        </li>
+        <li><strong>Comfortable Clothing:</strong> Wear loose, comfortable clothing that doesn't restrict movement. Flat
+            shoes with thin, flexible soles are ideal — or practice barefoot on a clean surface.</li>
+    </ul>
+
+    <h2>Time & Frequency</h2>
+    <p>For the 28-day program in this book, aim to practice once per day. Each session is designed to last between 10
+        and 20 minutes, depending on the week. The best time to practice is in the morning, as it helps set a calm,
+        focused tone for the rest of your day — but any time that works for your schedule is perfectly fine.</p>
+
+    <!-- ======== CHAPTER 4 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 4: Essential Breathing Techniques</h1>
+
+    <p>Breathing is the foundation of all Tai Chi practice. Before you learn a single movement, it's essential to master
+        the way of breathing that will accompany every exercise in this program.</p>
+
+    <h2>Why Breathing Matters</h2>
+    <p>Most people breathe shallowly, using only the upper part of their lungs. This type of breathing keeps the body in
+        a subtle state of stress. Tai Chi breathing — sometimes called "abdominal breathing" or "diaphragmatic
+        breathing" — expands the lower lungs, activates the diaphragm, and triggers your body's natural relaxation
+        response.</p>
+
+    <div class="exercise">
+        <h4>Exercise: Basic Abdominal Breathing</h4>
+        <ol>
+            <li>Sit or stand comfortably. Place one hand on your chest and the other on your belly, just below the
+                navel.</li>
+            <li>Breathe in slowly through your nose for 4 counts. Feel your belly push outward against your hand. Your
+                chest should barely move.</li>
+            <li>Pause for 1-2 counts at the top of the breath.</li>
+            <li>Exhale slowly through your mouth for 6 counts. Feel your belly draw inward naturally.</li>
+            <li>Repeat for 5-10 breath cycles.</li>
+        </ol>
+    </div>
+
+    <h2>Breathing During Movement</h2>
+    <p>Throughout this program, you'll follow a simple rule: <strong>inhale as you open or expand, exhale as you close
+            or contract</strong>. For example, when raising your arms upward, you inhale; when lowering them, you
+        exhale. This coordination of breath and movement is what gives Tai Chi its distinctive meditative quality.</p>
+
+    <div class="callout">
+        <strong>Tip:</strong> Don't worry about getting the breathing perfectly synchronized with every movement at
+        first. Focus on maintaining slow, relaxed breathing. The coordination will come naturally with practice.
+    </div>
+
+    <!-- ======== CHAPTER 5 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 5: The 10-Minute Daily Routine</h1>
+
+    <p>This is the core routine you'll return to again and again throughout the program and beyond. Once you've
+        completed the 28-day plan, this 10-minute routine can become your daily maintenance practice — the minimum
+        effective dose for maintaining balance, flexibility, and calm.</p>
+
+    <h2>The Routine</h2>
+
+    <div class="exercise">
+        <h4>Movement 1: Opening the Door (2 minutes)</h4>
+        <ol>
+            <li>Stand with feet shoulder-width apart, knees slightly bent, arms relaxed at your sides.</li>
+            <li>Inhale as you slowly raise both arms forward to shoulder height, palms facing down.</li>
+            <li>Exhale as you gently lower your arms back down, bending your knees slightly deeper.</li>
+            <li>Repeat 8-10 times in a slow, flowing rhythm.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 2: Parting the Wild Horse's Mane (2 minutes)</h4>
+        <ol>
+            <li>From the basic stance, shift your weight to your right leg.</li>
+            <li>Step forward with your left foot, right arm sweeping down and left arm rising up, as if stroking a
+                horse's mane.</li>
+            <li>Shift your weight to your left leg and repeat on the other side.</li>
+            <li>Alternate sides for 8 repetitions total (4 each side).</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 3: Cloud Hands (2 minutes)</h4>
+        <ol>
+            <li>Stand with feet wide, knees slightly bent.</li>
+            <li>Raise your right hand to face level, palm facing you, while your left hand drops to waist level.</li>
+            <li>Slowly shift your weight left while sweeping your hands — right hand descends as left hand rises.</li>
+            <li>Step together and repeat the pattern, moving slowly to the left for 4 steps, then back to the right.
+            </li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 4: Golden Rooster Stands on One Leg (2 minutes)</h4>
+        <ol>
+            <li>Stand near your support chair. Shift your weight to your right leg.</li>
+            <li>Slowly raise your left knee to a comfortable height (even a few inches is fine).</li>
+            <li>Simultaneously raise your left hand, palm up, to shoulder height.</li>
+            <li>Hold for 3-5 seconds. Lower slowly and repeat on the other side.</li>
+            <li>Alternate for 6-8 repetitions total.</li>
+        </ol>
+    </div>
+
+    <div class="exercise">
+        <h4>Movement 5: Closing Form (2 minutes)</h4>
+        <ol>
+            <li>Return to the starting stance, feet shoulder-width apart.</li>
+            <li>Inhale as you raise both arms slowly to the sides, palms facing up, until they meet above your head.
+            </li>
+            <li>Turn your palms to face downward and exhale slowly as you lower them in front of your body, down to your
+                waist.</li>
+            <li>Repeat 5 times, making each repetition slower than the last.</li>
+            <li>On the final repetition, bring your hands to rest on your lower belly. Close your eyes. Take 3 deep
+                breaths.</li>
+        </ol>
+    </div>
+
+    <!-- ======== CHAPTER 6 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 6: Week 1 — Building Your Foundation</h1>
+
+    <p>Welcome to your first week. This week is about building the foundation: learning to stand properly, breathe
+        correctly, and perform basic movements with awareness and control. There is no rush. Every master started
+        exactly where you are now.</p>
+
+    <h2>Day 1-2: The Basic Stance</h2>
+    <p>Your first two days focus entirely on standing meditation and the basic Tai Chi stance. This may seem simple, but
+        this posture is the foundation of everything that follows.</p>
+
+    <div class="exercise">
+        <h4>Standing Meditation (5-8 minutes)</h4>
+        <ol>
+            <li>Stand with feet shoulder-width apart, toes pointing slightly outward.</li>
+            <li>Bend your knees slightly — just enough that you can't see your toes when you look down (about 2-3
+                inches).</li>
+            <li>Tuck your tailbone slightly under, as if sitting on the edge of a high stool.</li>
+            <li>Let your shoulders drop. Arms hang naturally with a slight bend at the elbows.</li>
+            <li>Imagine a golden thread attached to the top of your head, gently pulling you upward.</li>
+            <li>Practice your abdominal breathing for 5-8 minutes in this position.</li>
+        </ol>
+    </div>
+
+    <h2>Day 3-4: Weight Shifting</h2>
+    <p>Now you'll add gentle weight shifts — the key to developing balance and the foundation of all Tai Chi movement.
+    </p>
+
+    <div class="exercise">
+        <h4>Side-to-Side Weight Shift (10 minutes)</h4>
+        <ol>
+            <li>Begin in the basic stance.</li>
+            <li>Slowly shift your weight to your right leg, keeping both feet flat on the floor. Your right knee bends
+                slightly deeper while your left leg lightens.</li>
+            <li>Pause for 2 seconds, feeling your right foot connect firmly with the ground.</li>
+            <li>Slowly shift your weight back through center and onto your left leg.</li>
+            <li>Repeat 10 times on each side.</li>
+            <li>Progress to forward-and-back weight shifts: step one foot forward and shift your weight between front
+                and back legs.</li>
+        </ol>
+    </div>
+
+    <h2>Day 5-7: First Movements</h2>
+    <p>This is where your practice comes alive. You'll combine the stance, breathing, and weight shifts with your first
+        arm movements — "Opening the Door" and the beginning of "Parting the Wild Horse's Mane" from your 10-Minute
+        Routine.</p>
+
+    <p>Practice each movement 8-10 times, focusing on slow, controlled motion. Remember: in Tai Chi, slower is better.
+        Each session should last about 12-15 minutes.</p>
+
+    <div class="callout">
+        <strong>Week 1 Goal:</strong> Feel comfortable in the basic stance for 5 minutes. Be able to shift your weight
+        side-to-side and front-to-back without losing balance. Complete "Opening the Door" with coordinated breathing.
+    </div>
+
+    <!-- ======== CHAPTER 7 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 7: Week 2 — Improving Balance & Stability</h1>
+
+    <p>In Week 2, you'll build on your foundation with movements specifically designed to challenge and improve your
+        balance. By now, the basic stance should feel more natural, and your breathing should be deeper and more
+        relaxed.</p>
+
+    <h2>Day 8-9: Cloud Hands</h2>
+    <p>Cloud Hands is one of the most beautiful and beneficial Tai Chi movements. It coordinates upper and lower body
+        movement, improves lateral balance, and develops a sense of flowing rhythm.</p>
+
+    <p>Practice Cloud Hands for 5 minutes each day, then combine it with your Opening the Door warm-up for a 10-minute
+        session.</p>
+
+    <h2>Day 10-11: Golden Rooster (Modified)</h2>
+    <p>This single-leg balance exercise is incredibly effective for building stability. Start with your support chair
+        nearby.</p>
+
+    <div class="exercise">
+        <h4>Modified Golden Rooster</h4>
+        <ol>
+            <li>Stand behind your chair, fingertips lightly resting on the backrest.</li>
+            <li>Shift your weight to your right foot.</li>
+            <li>Slowly lift your left foot just 2-3 inches off the ground.</li>
+            <li>Hold for 5-10 seconds. If stable, try lifting your left hand from the chair.</li>
+            <li>Lower and switch sides. Repeat 5 times per side.</li>
+            <li>As confidence grows, lift the knee higher and reduce chair contact.</li>
+        </ol>
+    </div>
+
+    <h2>Day 12-14: Combining Movements</h2>
+    <p>This is where the magic happens. You'll link together the movements you've learned into a flowing sequence.
+        Follow the 10-Minute Daily Routine from Chapter 5, performing each movement with the breathing patterns you've
+        practiced. By the end of Week 2, you should be able to perform the complete routine with minimal stops between
+        movements.</p>
+
+    <div class="callout">
+        <strong>Week 2 Goal:</strong> Complete the 10-Minute Daily Routine as a continuous sequence. Hold Golden Rooster
+        with minimal chair support for 8-10 seconds per side.
+    </div>
+
+    <!-- ======== CHAPTER 8 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 8: Week 3 — Deepening Your Practice</h1>
+
+    <p>By Week 3, you should notice changes: better balance when walking, greater ease when getting up from a chair, and
+        perhaps a calmer mind. This week deepens your practice with new movements and longer holds.</p>
+
+    <h2>Day 15-16: Brush Knee & Push</h2>
+
+    <div class="exercise">
+        <h4>Brush Knee & Push</h4>
+        <ol>
+            <li>From the basic stance, step forward with your left foot into a gentle front stance.</li>
+            <li>As you step, your left hand sweeps down and across your left knee (brush knee), while your right hand
+                pushes forward at chest height, palm facing outward.</li>
+            <li>Shift your weight back and bring your feet together.</li>
+            <li>Repeat on the other side: step with right foot, right hand brushes knee, left hand pushes.</li>
+            <li>Alternate for 8 repetitions total.</li>
+        </ol>
+    </div>
+
+    <h2>Day 17-18: Wave Hands Like Clouds (Extended)</h2>
+    <p>This is an expanded version of the Cloud Hands you learned in Week 2. Now add footwork: as your hands circle,
+        step slowly to the side, bringing your feet together with each transition. Practice moving 6-8 steps in one
+        direction, then reverse. This develops coordination, balance, and spatial awareness.</p>
+
+    <h2>Day 19-21: Extended Practice Session</h2>
+    <p>This week, extend your daily session to 15-18 minutes by combining all movements in sequence: Opening the Door →
+        Parting Wild Horse's Mane → Cloud Hands (Extended) → Brush Knee & Push → Golden Rooster → Closing Form. Perform
+        each movement segment for about 2-3 minutes, flowing smoothly from one to the next.</p>
+
+    <div class="callout">
+        <strong>Week 3 Goal:</strong> Perform a 15-minute continuous practice combining all learned movements. Feel
+        stable enough to do Golden Rooster without chair support (even briefly).
+    </div>
+
+    <!-- ======== CHAPTER 9 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 9: Week 4 — Flow & Confidence</h1>
+
+    <p>Congratulations — you've made it to the final week of the program! By now, your body has adapted significantly.
+        Your muscles are stronger, your balance is sharper, and your movements should feel more natural and fluid. This
+        week is about refinement, confidence, and establishing Tai Chi as a lifelong practice.</p>
+
+    <h2>Day 22-23: Repulse the Monkey</h2>
+
+    <div class="exercise">
+        <h4>Repulse the Monkey</h4>
+        <ol>
+            <li>From the basic stance, extend your right arm forward, palm facing outward.</li>
+            <li>Step backward with your right foot as your right hand draws back to your hip and your left hand pushes
+                forward.</li>
+            <li>Step backward with your left foot, reversing the arm positions.</li>
+            <li>Continue stepping backward slowly, alternating sides, for 6-8 steps.</li>
+            <li>Focus on keeping your spine straight and your movements smooth and even.</li>
+        </ol>
+    </div>
+
+    <h2>Day 24-25: Your Complete Routine</h2>
+    <p>Now practice the full sequence of all movements you've learned. Aim for 18-20 minutes of continuous, flowing
+        practice. Move between movements without pausing — let each one transition naturally into the next. This is the
+        essence of Tai Chi: a moving meditation where body and breath are perfectly synchronized.</p>
+
+    <h2>Day 26-28: Mastery & Personalization</h2>
+    <p>These final days are about making the practice your own. Try the following:</p>
+    <ul>
+        <li><strong>Eyes Closed:</strong> Try performing familiar movements with your eyes closed (near a wall for
+            safety). This dramatically improves proprioception.</li>
+        <li><strong>Outdoor Practice:</strong> If weather permits, take your routine to a garden, park, or patio. Fresh
+            air enhances the meditative quality.</li>
+        <li><strong>Music:</strong> Try practicing with slow, gentle music. Traditional Chinese instrumental music works
+            beautifully.</li>
+        <li><strong>Teach Someone:</strong> One of the best ways to deepen your practice is to teach a friend or family
+            member what you've learned.</li>
+    </ul>
+
+    <div class="callout">
+        <strong>Week 4 Goal:</strong> Perform a full 20-minute practice with smooth transitions. Feel confident
+        practicing without any external support. Begin personalizing your routine.
+    </div>
+
+    <!-- ======== CHAPTER 10 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 10: Relaxation & Stress Relief Techniques</h1>
+
+    <p>Beyond the physical movements, Tai Chi offers powerful tools for mental and emotional well-being. This chapter
+        introduces additional relaxation techniques you can use alongside your daily practice.</p>
+
+    <h2>Body Scan Meditation</h2>
+
+    <div class="exercise">
+        <h4>5-Minute Body Scan</h4>
+        <ol>
+            <li>Sit or lie down comfortably. Close your eyes.</li>
+            <li>Begin at the top of your head. Notice any tension, and consciously release it with each exhale.</li>
+            <li>Slowly move your attention down through your face, neck, shoulders, arms, hands, chest, belly, hips,
+                legs, and feet.</li>
+            <li>At each area, breathe into it and let go of any tightness or holding.</li>
+            <li>When you reach your feet, take 3 deep breaths and slowly open your eyes.</li>
+        </ol>
+    </div>
+
+    <h2>Standing Meditation for Stress Relief</h2>
+    <p>Return to the standing meditation from Week 1, but now hold it for 8-10 minutes. As you stand, visualize roots
+        growing from your feet into the earth, anchoring you firmly. With each exhale, imagine stress and tension
+        flowing down through your body and out through these roots. This visualization technique has been used in Tai
+        Chi for centuries and is remarkably effective for calming anxiety.</p>
+
+    <h2>Gentle Self-Massage</h2>
+    <p>After your Tai Chi session, spend 2-3 minutes gently massaging these key areas:</p>
+    <ul>
+        <li><strong>Temples:</strong> Small circular motions with your fingertips for 30 seconds.</li>
+        <li><strong>Ears:</strong> Gently pull and massage your earlobes and the outer edges of your ears.</li>
+        <li><strong>Knees:</strong> Place your palms over your knee caps and make slow circles, warming the joint.</li>
+        <li><strong>Lower Back:</strong> Make fists and gently tap your lower back on both sides of the spine.</li>
+    </ul>
+
+    <!-- ======== CHAPTER 11 ======== -->
+    <div class="page-break"></div>
+    <h1>Chapter 11: Maintaining Your Practice Long-Term</h1>
+
+    <p>You've completed the 28-day program — congratulations! But this is really just the beginning. The true benefits
+        of Tai Chi compound over months and years of consistent practice. Here's how to keep your momentum going.</p>
+
+    <h2>Your Ongoing Schedule</h2>
+    <ul>
+        <li><strong>Minimum:</strong> Practice the 10-Minute Daily Routine from Chapter 5 at least 5 days per week.</li>
+        <li><strong>Ideal:</strong> Practice the full 20-minute routine daily, adding the relaxation techniques from
+            Chapter 10.</li>
+        <li><strong>Social:</strong> Consider joining a local Tai Chi class or online community. Practicing with others
+            adds accountability and joy.</li>
+    </ul>
+
+    <h2>Tracking Your Progress</h2>
+    <p>Keep a simple journal to track your practice. Note:</p>
+    <ul>
+        <li>How many minutes you practiced</li>
+        <li>Which movements felt smooth and which felt challenging</li>
+        <li>How you felt before and after the session (energy level, mood, pain levels)</li>
+        <li>Any improvements you notice in daily life (better balance, easier stairs, calmer mind)</li>
+    </ul>
+
+    <h2>Continue Learning</h2>
+    <p>This program gave you a solid foundation. To continue growing:</p>
+    <ul>
+        <li>Check out the bonus books included with this bundle: <strong>Tai Chi for Weight Loss</strong> and
+            <strong>Tai Chi for Beginners</strong>
+        </li>
+        <li>Look into the traditional Tai Chi long form (108 movements) when you feel ready for a deeper challenge</li>
+        <li>Explore Qigong, a related Chinese practice that focuses even more on energy cultivation and healing</li>
+    </ul>
+
+    <div class="callout">
+        <strong>Remember:</strong> The most important session is the next one. Don't worry about perfection — simply
+        show up, breathe, and move. Your body and mind will thank you.
+    </div>
+
+    <p class="disclaimer">
+        © 2026 RSCA Library. All rights reserved.<br>
+        This publication is for informational purposes only. Consult a healthcare professional before starting any new
+        exercise program.
+    </p>
+
+</body>
+
+</html>

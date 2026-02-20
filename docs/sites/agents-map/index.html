@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOS Agent Ecosystem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #06060b;
+            --surface: rgba(15, 15, 25, 0.7);
+            --surface-hover: rgba(25, 25, 40, 0.85);
+            --border: rgba(100, 100, 255, 0.1);
+            --border-hover: rgba(0, 240, 255, 0.35);
+            --text-main: #eaeaf0;
+            --text-muted: #8a8a9a;
+            --neon: #00f0ff;
+            --purple: #b026ff;
+            --gold: #ffd700;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            background-image:
+                radial-gradient(ellipse at 10% 20%, rgba(176, 38, 255, 0.07) 0%, transparent 50%),
+                radial-gradient(ellipse at 90% 80%, rgba(0, 240, 255, 0.05) 0%, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        /* ── Header ── */
+        header {
+            text-align: center;
+            padding: 5rem 2rem 3rem;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 120px; height: 2px;
+            background: linear-gradient(to right, var(--neon), var(--purple));
+            border-radius: 2px;
+        }
+        .logo-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--neon);
+            background: rgba(0, 240, 255, 0.08);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            padding: 0.4rem 1.2rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+        }
+        h1 {
+            font-size: clamp(2.4rem, 5vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fff 0%, var(--neon) 50%, var(--purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 550px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .counter {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .counter strong {
+            color: var(--neon);
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        /* ── Search ── */
+        .search-bar {
+            max-width: 480px;
+            margin: 2.5rem auto 1rem;
+            position: relative;
+        }
+        .search-bar input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            background: rgba(15,15,25,0.8);
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        .search-bar input::placeholder { color: var(--text-muted); }
+        .search-bar input:focus { border-color: var(--neon); }
+        .search-bar .icon {
+            position: absolute;
+            left: 1rem; top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        /* ── Filter Chips ── */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            padding: 0 1rem;
+        }
+        .chip {
+            padding: 0.45rem 1rem;
+            border-radius: 100px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: inherit;
+            font-weight: 500;
+            transition: all 0.25s;
+        }
+        .chip:hover, .chip.active {
+            background: rgba(0, 240, 255, 0.1);
+            border-color: var(--neon);
+            color: var(--neon);
+        }
+
+        /* ── Grid ── */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 1.5rem;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        /* ── Card ── */
+        .card {
+            background: var(--surface);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(.175,.885,.32,1.275),
+                        border-color 0.3s,
+                        box-shadow 0.4s;
+            cursor: default;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(255,255,255,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .card:hover {
+            transform: translateY(-6px) scale(1.015);
+            border-color: var(--border-hover);
+            box-shadow:
+                0 24px 48px rgba(0,0,0,0.35),
+                0 0 30px rgba(0, 240, 255, 0.06);
+        }
+
+        .card-head {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .avatar {
+            width: 54px; height: 54px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: inset 0 0 16px rgba(0,0,0,0.4);
+        }
+        .meta h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+        }
+        .badge {
+            display: inline-block;
+            margin-top: 0.25rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: var(--neon);
+            background: rgba(0, 240, 255, 0.08);
+            padding: 0.15rem 0.55rem;
+            border-radius: 100px;
+        }
+        .card-role {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: var(--text-main);
+            padding-bottom: 0.7rem;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .card-desc {
+            font-size: 0.85rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            flex-grow: 1;
+        }
+        .card-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+        }
+        .cmd {
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            background: rgba(0,0,0,0.45);
+            padding: 0.35rem 0.7rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            color: var(--neon);
+            border: 1px solid rgba(0, 240, 255, 0.15);
+            user-select: all;
+        }
+        .category-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+
+        /* ── Category colors ── */
+        .cat-core .category-dot { background: #ffd700; }
+        .cat-dev .category-dot { background: #00aaff; }
+        .cat-content .category-dot { background: #b026ff; }
+        .cat-marketing .category-dot { background: #ff6b6b; }
+        .cat-design .category-dot { background: #ff69b4; }
+        .cat-quality .category-dot { background: #00e676; }
+        .cat-product .category-dot { background: #ff9800; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            header { padding: 3rem 1.5rem 2rem; }
+            .grid { padding: 0 1rem 3rem; gap: 1rem; }
+            .card { padding: 1.4rem; }
+        }
+
+        /* ── Animation ── */
+        .card {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.175,.885,.32,1.275);
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-badge">Synkra AIOS</div>
+    <h1>Agent Ecosystem</h1>
+    <p class="subtitle">O mapa completo de todos os agentes especializados disponíveis no seu CLI. Filtre, pesquise e encontre o par perfeito para sua tarefa.</p>
+    <div class="counter"><strong id="agent-count">32</strong> agentes especializados</div>
+
+    <div class="search-bar">
+        <span class="icon">🔍</span>
+        <input type="text" id="search" placeholder="Buscar agente por nome, função ou habilidade…" autocomplete="off">
+    </div>
+</header>
+
+<div class="filters" id="filters">
+    <button class="chip active" data-cat="all">Todos</button>
+    <button class="chip" data-cat="core">👑 Core</button>
+    <button class="chip" data-cat="dev">💻 Desenvolvimento</button>
+    <button class="chip" data-cat="content">✍️ Conteúdo & Copy</button>
+    <button class="chip" data-cat="marketing">🎯 Marketing & Tráfego</button>
+    <button class="chip" data-cat="design">🎨 Design & Visual</button>
+    <button class="chip" data-cat="quality">✅ Qualidade & Revisão</button>
+    <button class="chip" data-cat="product">🚀 Produto & Estratégia</button>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script>
+const agents = [
+    // ── CORE ──
+    { id:"aios-master", name:"Orion", role:"AIOS Master Orchestrator & Framework Developer", desc:"Orquestrador supremo do ecossistema. Expertise transversal em todos os domínios, criação de componentes do framework e coordenação de workflows.", emoji:"👑", cat:"core" },
+
+    // ── DESENVOLVIMENTO ──
+    { id:"dev", name:"Dex", role:"Full Stack Developer", desc:"Implementação de código, debugging, refactoring e boas práticas de desenvolvimento. O construtor principal do time.", emoji:"💻", cat:"dev" },
+    { id:"architect", name:"Aria", role:"Software Architect", desc:"Projetista de arquiteturas escaláveis, decisões técnicas de alto nível e design de sistemas complexos.", emoji:"🏛️", cat:"dev" },
+    { id:"data-engineer", name:"Dara", role:"Database Architect & Operations Engineer", desc:"Design de banco de dados, schema architecture, Supabase, RLS policies, migrations e query optimization.", emoji:"📊", cat:"dev" },
+    { id:"devops", name:"Gage", role:"GitHub Repository Manager & DevOps", desc:"Operações de repositório, versionamento, CI/CD, quality gates. Único agente autorizado a fazer push remoto.", emoji:"⚡", cat:"dev" },
+    { id:"landing-page-dev", name:"Kael", role:"Landing Page Developer & Optimizer", desc:"Especialista em codificar páginas de vendas, páginas de obrigado e layouts HTML/CSS/JS de alta conversão. Focado em performance e interatividade.", emoji:"💻", cat:"dev" },
+
+    // ── CONTEÚDO & COPY ──
+    { id:"copywriter", name:"Leo", role:"Direct Response Copywriter", desc:"Especialista em escrita persuasiva para anúncios, VSLs e emails. Foco em psicologia, hooks e conversão.", emoji:"✍️", cat:"content" },
+    { id:"ebook-writer", name:"Maya", role:"E-book Writer & Storyteller", desc:"Especialista em redigir livros digitais e produtos de informação. Transforma pesquisas frias em narrativas envolventes e didáticas.", emoji:"📖", cat:"content" },
+    { id:"email-strategist", name:"Elara", role:"Email Marketing Strategist", desc:"Especialista em sequências de email que nutrem, convertem e retêm. Escreve emails que parecem vir de um amigo, não de uma marca.", emoji:"📧", cat:"content" },
+    { id:"humanizer", name:"Nina", role:"Copy Humanizer", desc:"Transforma texto robótico ou excessivamente marqueteiro em conversa quente, empática e com personalidade real.", emoji:"💬", cat:"content" },
+    { id:"simplifier", name:"Kai", role:"Copy Simplifier", desc:"Quebra qualquer conceito complexo em linguagem tão simples que uma criança de 10 anos entenderia. Elimina jargão.", emoji:"🧒", cat:"content" },
+    { id:"localizer", name:"Luca", role:"Cultural Adapter & Transcriber", desc:"Especialista em quebrar barreiras linguísticas. Foco em transcrição e adaptação cultural para novos mercados.", emoji:"🌐", cat:"content" },
+    { id:"deep-researcher", name:"Arthur", role:"Deep Researcher & Data Analyst", desc:"Pesquisador incansável. Busca validar ideias com artigos científicos, estudos de caso e varredura na concorrência.", emoji:"🔬", cat:"content" },
+    { id:"content-organizer", name:"Clara", role:"Content Architect & Organizer", desc:"Especialista em pegar informações brutas e estruturar em mapas mentais, cronogramas e sumários lineares e progressivos.", emoji:"🗂️", cat:"content" },
+    { id:"deliverables-expert", name:"Sophie", role:"Deliverables & Formats Specialist", desc:"Adapta o conteúdo base em múltiplos formatos práticos: scripts de aula, checklists, planilhas e workbooks consumíveis.", emoji:"📦", cat:"content" },
+
+    // ── MARKETING & TRÁFEGO ──
+    { id:"traffic-manager", name:"Aiden", role:"Traffic Manager Expert", desc:"Especialista em aquisição de tráfego pago, especificamente Meta Ads (Facebook & Instagram). Foco em ROI, testes criativos e segmentação.", emoji:"🎯", cat:"marketing" },
+    { id:"miner", name:"Cole", role:"Product & Trend Miner", desc:"Caçador de tesouros. Vasculha a internet por produtos virais, criativos trending e oportunidades inexploradas.", emoji:"⛏️", cat:"marketing" },
+    { id:"funnel-strategist", name:"Ivy", role:"Funnel Strategist", desc:"Arquiteta de jornadas do cliente. Foco em maximizar LTV, aumentar AOV e tampar vazamentos no funil.", emoji:"🧩", cat:"marketing" },
+    { id:"offer-analyst", name:"Oscar", role:"Offer Specialist", desc:"Expert em craftar ofertas irresistíveis. Foco em empilhamento de valor, psicologia de preço e posicionamento.", emoji:"💎", cat:"marketing" },
+
+    // ── DESIGN & VISUAL ──
+    { id:"designer", name:"Maya", role:"Creative Designer", desc:"Especialista em comunicação visual para marketing de performance. Foco em CTR, hooks visuais e consistência de marca.", emoji:"🎨", cat:"design" },
+    { id:"ux-design-expert", name:"Uma", role:"UX/UI Designer & Design System Architect", desc:"Workflow completo: pesquisa de usuário, wireframes, design systems, extração de tokens, construção de componentes e QA.", emoji:"🎨", cat:"design" },
+    { id:"page-modeler", name:"Sienna", role:"Page Modeler", desc:"Expert em landing pages de alta conversão. Usa frameworks comprovados e dados para estruturar páginas que convertem.", emoji:"📐", cat:"design" },
+    { id:"visual-creator", name:"Enzo", role:"Visual Concept & Interactive Designer", desc:"Especialista em prompterização para IA visual (Midjourney/DALL-E), conceituando arte interativa e elementos gráficos ricos.", emoji:"🎨", cat:"design" },
+    { id:"layout-designer", name:"Liam", role:"Typesetter & Layout Director", desc:"Diagramador excepcional. Especialista em tipografia, respiros visuais e construção do layout perfeito em PDFs e E-books.", emoji:"📐", cat:"design" },
+
+    // ── QUALIDADE & REVISÃO ──
+    { id:"qa", name:"Quinn", role:"Test Architect & Quality Advisor", desc:"Revisão abrangente de arquitetura de testes, decisões de quality gate e melhoria de código. Advisory — times escolhem seu nível.", emoji:"✅", cat:"quality" },
+    { id:"proofreader", name:"Elena", role:"Master Proofreader & Quality Assurance", desc:"Revisa implacavelmente todos os detalhes sintáticos, ortográficos, links quebrados e garantias de segurança no material.", emoji:"🧐", cat:"quality" },
+
+    // ── PRODUTO & ESTRATÉGIA ──
+    { id:"pm", name:"Morgan", role:"Product Manager", desc:"Gerenciamento de produto, roadmaps, priorização de features e alinhamento entre times técnicos e de negócio.", emoji:"📋", cat:"product" },
+    { id:"po", name:"Pax", role:"Product Owner", desc:"Gestão de backlog, refinamento de stories, acceptance criteria, sprint planning e decisões de priorização.", emoji:"🎯", cat:"product" },
+    { id:"sm", name:"River", role:"Scrum Master", desc:"Facilitador ágil. Garante fluxos de trabalho eficientes, remove impedimentos e promove melhoria contínua.", emoji:"🌊", cat:"product" },
+    { id:"analyst", name:"Atlas", role:"Business Analyst", desc:"Análise de negócios, levantamento de requisitos, mapeamento de processos e tradução entre negócio e tecnologia.", emoji:"🔍", cat:"product" },
+    { id:"squad-creator", name:"Craft", role:"Squad Creator", desc:"Cria, valida, publica e gerencia esquadrões de agentes para missões específicas.", emoji:"🏗️", cat:"product" },
+    { id:"mvp-exporter", name:"Victor", role:"MVP Strategist", desc:"Especialista em definir e recortar escopos enxutos. Pega grandes ideias e formata em Produtos Mínimos Viáveis de validação rápida.", emoji:"🚀", cat:"product" },
+];
+
+document.getElementById('agent-count').textContent = agents.length;
+
+const grid = document.getElementById('grid');
+const searchInput = document.getElementById('search');
+const filtersEl = document.getElementById('filters');
+let activeFilter = 'all';
+
+function renderCards(list) {
+    grid.innerHTML = '';
+    if (list.length === 0) {
+        grid.innerHTML = '<div class="no-results">Nenhum agente encontrado com esse filtro. Tente outro termo.</div>';
+        return;
+    }
+    list.forEach((a, i) => {
+        const card = document.createElement('div');
+        card.className = `card cat-${a.cat}`;
+        card.innerHTML = `
+            <div class="card-head">
+                <div class="avatar">${a.emoji}</div>
+                <div class="meta">
+                    <h2>${a.name}</h2>
+                    <span class="badge">@${a.id}</span>
+                </div>
+            </div>
+            <div class="card-role">${a.role}</div>
+            <div class="card-desc">${a.desc}</div>
+            <div class="card-foot">
+                <div class="cmd">@${a.id}</div>
+                <div class="category-dot" title="${a.cat}"></div>
+            </div>
+        `;
+        grid.appendChild(card);
+        setTimeout(() => card.classList.add('visible'), 30 * i);
+    });
+}
+
+function filterAgents() {
+    const q = searchInput.value.toLowerCase().trim();
+    let filtered = agents;
+    if (activeFilter !== 'all') {
+        filtered = filtered.filter(a => a.cat === activeFilter);
+    }
+    if (q) {
+        filtered = filtered.filter(a =>
+            a.name.toLowerCase().includes(q) ||
+            a.id.toLowerCase().includes(q) ||
+            a.role.toLowerCase().includes(q) ||
+            a.desc.toLowerCase().includes(q)
+        );
+    }
+    renderCards(filtered);
+}
+
+filtersEl.addEventListener('click', (e) => {
+    if (!e.target.classList.contains('chip')) return;
+    filtersEl.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    e.target.classList.add('active');
+    activeFilter = e.target.dataset.cat;
+    filterAgents();
+});
+
+searchInput.addEventListener('input', filterAgents);
+
+renderCards(agents);
+</script>
+
+</body>
+</html>

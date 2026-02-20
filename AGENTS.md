@@ -68,6 +68,15 @@ Atalhos aceitos por agente:
 - `@sm`, `/sm`, `/sm.md` -> `.aios-core/development/agents/sm.md`
 - `@squad-creator`, `/squad-creator`, `/squad-creator.md` -> `.aios-core/development/agents/squad-creator.md`
 - `@ux-design-expert`, `/ux-design-expert`, `/ux-design-expert.md` -> `.aios-core/development/agents/ux-design-expert.md`
+- `@content-organizer`, `/content-organizer`, `/content-organizer.md` -> `.aios-core/development/agents/content-organizer.md`
+- `@deep-researcher`, `/deep-researcher`, `/deep-researcher.md` -> `.aios-core/development/agents/deep-researcher.md`
+- `@deliverables-expert`, `/deliverables-expert`, `/deliverables-expert.md` -> `.aios-core/development/agents/deliverables-expert.md`
+- `@ebook-writer`, `/ebook-writer`, `/ebook-writer.md` -> `.aios-core/development/agents/ebook-writer.md`
+- `@landing-page-dev`, `/landing-page-dev`, `/landing-page-dev.md` -> `.aios-core/development/agents/landing-page-dev.md`
+- `@layout-designer`, `/layout-designer`, `/layout-designer.md` -> `.aios-core/development/agents/layout-designer.md`
+- `@mvp-exporter`, `/mvp-exporter`, `/mvp-exporter.md` -> `.aios-core/development/agents/mvp-exporter.md`
+- `@proofreader`, `/proofreader`, `/proofreader.md` -> `.aios-core/development/agents/proofreader.md`
+- `@visual-creator`, `/visual-creator`, `/visual-creator.md` -> `.aios-core/development/agents/visual-creator.md`
 
 Resposta esperada ao ativar atalho:
 1. Confirmar agente ativado
